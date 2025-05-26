@@ -1,0 +1,105 @@
+/* NosTarifs.css */
+
+.page-tarifs {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.tarifs-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d4af37;
+  padding-top: 40px;
+  margin: 0;
+}
+
+.tarif-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  box-sizing: border-box;
+}
+
+.tarif-section {
+  margin-bottom: 2rem;
+}
+
+.tarif-section h2 {
+  color: #d4af37;;
+  margin-bottom: 1rem;
+}
+
+.tarif-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tarif-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive table */
+.tarif-table-wrapper {
+  overflow-x: auto;
+}
+
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+  color: #fff;
+}
+
+.tarif-table th,
+.tarif-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #d4af37;;
+}
+
+.tarif-table th {
+  background-color: #d4af37;;
+  color: #000;
+}
+
+/* Image après le tableau */
+.tarif-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.tarif-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .tarifs-title {
+    font-size: 2rem;
+  }
+
+  .tarif-card {
+    padding: 1rem;
+  }
+
+  .tarif-table th,
+  .tarif-table td {
+    padding: 0.5rem;
+  }
+}
+

@@ -1,0 +1,279 @@
+
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.homepage {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Titre principal avec image */
+.image-container {
+  width: 100%;
+  height: 50vh;
+  background-image: url('../../assets/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 4rem;
+  color: #d4af37;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Filtre foncé pour lisibilité */
+  z-index: 0;
+}
+
+/* Section "Découvrir notre club" */
+.club-section,
+.coaches-section,
+.commentaires-section {
+  padding: 40px 20px;
+  background-color: #000;
+}
+
+.club-section h2,
+.coaches-section h2,
+.commentaires-section h2 {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.paragraph-container p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Slider Swiper - Pleine largeur */
+.full-width-slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-width-slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Coaches Section */
+.coaches-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.coach {
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.coach-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #d4af37;
+}
+
+.stars {
+  text-align: center;
+  font-size: 1.5rem;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* Commentaires Section */
+.commentaires-section {
+  background-color: #000;
+}
+
+#add-comment-form {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#add-comment-form input,
+#add-comment-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #111;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#add-comment-form button {
+  padding: 12px;
+  background-color: #d4af37;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-comment-form button:hover {
+  background-color: gold;
+}
+
+/* Liste des commentaires */
+#comments-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  transition: transform 0.2s ease;
+}
+
+.comment-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.comment-name {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.comment-text {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 10px;
+}
+
+.comment-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.admin-response {
+  margin-top: 10px;
+  color: #d4af37;
+  font-style: italic;
+  border-left: 3px solid #d4af37;
+  padding-left: 10px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comment-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-actions button:first-child {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.comment-actions button:first-child:hover {
+  background-color: gold;
+}
+
+.comment-actions button:last-child {
+  background-color: #333;
+  color: #fff;
+}
+
+.comment-actions button:last-child:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .club-section h2,
+  .coaches-section h2,
+  .commentaires-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .paragraph-container p {
+    font-size: 1rem;
+  }
+
+  .coaches-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coach {
+    max-width: 90%;
+  }
+
+  #add-comment-form {
+    padding: 15px;
+  }
+
+  #add-comment-form input,
+  #add-comment-form textarea {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,178 @@
+nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #0f172a;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  
+  /* Navbar header : logo + menu burger */
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Logo */
+  .logo-image {
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  /* Burger menu */
+  .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    margin-bottom: 5px;
+  }
+  
+  /* Liens */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #d4af37;
+    color: black;
+  }
+  
+  /* Responsive à 992px */
+  @media (max-width: 714px) {
+
+    .navbar-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem; /* ajoute un peu de marge à gauche et droite */
+        box-sizing: border-box;
+      }
+    
+      .logo-image {
+        max-width: 70px; /* réduire un peu la taille du logo si besoin */
+        height: auto;
+      }
+    /* Affiche burger */
+    .menu {
+      display: flex;
+    }
+  
+    /* Cache liens */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    /* Affiche liens ouverts */
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+      margin: 8px 0;
+    }
+  
+    .nav-links li a {
+      display: block;
+      width: 100%;
+  
+      background-color: transparent;
+      color: white;
+      padding: 12px 0;
+      border-radius: 25px;
+    }
+  
+    .nav-links li a:hover {
+      background-color: #d4af37;
+      color: black;
+    }
+  
+    /* Navbar header occupe toute la largeur et espace logo + burger */
+    .navbar-header {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    nav.navbar {
+      flex-wrap: wrap; /* permet liens sous header */
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 480px) {
+    .navbar-header {
+      width: 100%;
+      display: flex;
+      justify-content: center; /* centre horizontalement */
+      align-items: center;
+      gap: 10rem; /* espace entre le logo et le burger */
+      padding: 0.5rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+  
+    .logo-image {
+      width: 60px;
+      height: auto;
+      object-fit: contain;
+    }
+  
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+  
+    .menu span {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 2px;
+    }
+  
+    .nav-links {
+      width: 100%;
+    }
+  
+    .nav-links li a {
+      font-size: 16px;
+    }
+  }
+  
