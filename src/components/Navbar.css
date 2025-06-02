@@ -42,6 +42,15 @@ nav.navbar {
     margin-bottom: 5px;
   }
   
+  
+
+.logout-button:hover {
+  background-color: #d4af37;
+  color: black;
+  border-color: #d4af37;
+}
+
+
   /* Liens */
   .nav-links {
     display: flex;

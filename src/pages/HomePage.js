@@ -148,8 +148,7 @@ function HomePage() {
                 <h2>Découvrir notre club</h2>
                 <div className="paragraph-container">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae 
-                        vestibulum vestibulum. Donec in efficitur magna. Nullam vel semper justo.
+                       Notre club de boxe, fondé en 2009 par Dominique et Idrissa, deux passionnés de sport et d'engagement. Depuis sa création, le club accueille des boxeurs de tous niveaux, dans une ambiance familiale et exigeante, où le respect, la discipline et la progression sont au cœur de chaque entraînement
                     </p>
                 </div>
             </section>
@@ -231,7 +230,7 @@ function HomePage() {
                     {comments.slice(0, visibleComments).map((comment) => (
                         <div key={comment.id} className="comment-card">
                             <p className="comment-name"><strong>{comment.name}</strong></p>
-                            <p className="comment-text">{comment.text}</p>
+                            <p className="comment-text">{comment.message}</p>
                             <p className="comment-date">
                                 Posté le : {new Date(comment.date_creation).toLocaleDateString()}
                             </p>

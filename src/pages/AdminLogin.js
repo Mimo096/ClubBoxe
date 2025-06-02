@@ -51,6 +51,8 @@ function AdminLogin() {
             
             localStorage.setItem('adminToken', data.token) ; // Stocke le token JWT
             localStorage.setItem('adminId', data.adminId); // Stockez l'ID ici
+            localStorage.setItem('role', 'admin');
+
 
             navigate('/admin/dashboard'); // Redirige vers le tableau de bord
         } catch (err) {
